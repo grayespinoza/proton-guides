@@ -17,23 +17,19 @@ flatpak install -y flathub com.github.tchx84.Flatseal com.valvesoftware.Steam
 
 ## The Sims Medieval
 
-Grant Flatpak Steam access to your CD drive as The Sims Medieval will read it to verify ownership of the game. To do so mount your CD drive, then
+Mount your DVD drive and grant Flatpak Steam access to it as The Sims Medieval will read it to verify ownership of the game, i.e.,
 
 ```shell
-lsblk
-```
-
-Look for `/run/media/user/TSimsM` but replace `user` with what your username is in the following command
-
-```shell
-flatpak override --user --filesystem=/run/media/user/TSimsM:ro com.valvesoftware.Steam
+sudo mkdir -p /run/media/$USER/TSimsM
+sudo mount -o ro /dev/sr0 /run/media/$USER/TSimsM
+flatpak override --user --filesystem=/run/media/$USER/TSimsM:ro com.valvesoftware.Steam
 ```
 
 Reboot Flatpak Steam, then
 
 1. Navigate to `~/.var/app/com.valvesoftware.Steam/Steam/steamapps/common`
 2. Create a folder called `The Sims Medieval`
-3. Move the contents of the loaded CD into `The Sims Medieval`
+3. Move the contents of the loaded DVD into `The Sims Medieval`
 4. Open _Steam_
 5. Go to _Library_
 6. Click _Add a Game_
