@@ -1,0 +1,6 @@
+[submodule "plutonium"]
+	path = plutonium
+	url = https://github.com/grayespinoza/setup-plutonium.git
+[submodule "bsmanager"]
+	path = bsmanager
+	url = https://github.com/grayespinoza/setup-bsmanager.git
