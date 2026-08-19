@@ -48,7 +48,7 @@ Reboot Flatpak Steam, then
 19. Copy `TS3.exe` to `~/.var/app/com.valvesoftware.Steam/Steam/steamapps/common/The Sims 3/Game/Bin/`, i.e.,
 
 ```shell
-sudo cp "~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/game_id/pfx/drive_c/Program Files (x86)/Electronic Arts/The Sims 3/Game/Bin/TS3.exe" "~/.var/app/com.valvesoftware.Steam/Steam/steamapps/common/The Sims 3/Game/Bin/"
+sudo cp "$HOME/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/game_id/pfx/drive_c/Program Files (x86)/Electronic Arts/The Sims 3/Game/Bin/TS3.exe" "$HOME/.var/app/com.valvesoftware.Steam/Steam/steamapps/common/The Sims 3/Game/Bin/"
 ```
 
 where `game_id` is replaced with your respective id.
